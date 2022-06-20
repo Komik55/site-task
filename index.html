@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moscowqual</title>
+    <link rel="icon" href="./img/logo.png" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+    <script defer src="./js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script  src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="modal" class=" flex justify-center items-center modal z-50 bg-[#00000096] opacity-3 w-[100vw] h-[100vh] fixed">
+          <div class="bg-white relative w-[60%] sm:w-[35%]  rounded-[20px] p-5">
+            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" class="absolute right-2 top-2 cursor-pointer" onclick="onCancel()"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 8.7070312 7.2929688 L 7.2929688 8.7070312 L 10.585938 12 L 7.2929688 15.292969 L 8.7070312 16.707031 L 12 13.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13.414062 12 L 16.707031 8.7070312 L 15.292969 7.2929688 L 12 10.585938 L 8.7070312 7.2929688 z"/></svg>
+            <div class="mb-3">
+              <h1  class="font-bold text-lg mb-1">Имя</h1>
+            <input type="text" required placeholder="Введите имя" class="w-full rounded-[15px] border border-black p-2" />
+            </div>
+            <div class="mb-3">
+              <h1 class="font-bold text-lg mb-1">Адрес электронной почты</h1>
+            <input type="email" required placeholder="Введите адрес электронной почты " class="w-full rounded-[15px] border border-black p-2" />
+            </div>
+            <div>
+              <h1 class="font-bold text-lg mb-1">Номер телефона</h1>
+            <input type="text" required placeholder="Введите номер телефона" maxlength="8" class="w-full rounded-[15px] border border-black p-2" />
+            </div>
+            <button type="submit" class="bg-[#00BB34] w-full rounded-[10px] p-3 btn-shad mt-4 text-center text-white">Заказать</button>
+          </div>
+      </div>
+      <section class="top">
+        <header class="header py-5">
+          <div
+            class="flex justify-center xl md sm mx-auto  items-center"
+          >
+            <div class="flex items-center gap-x-[35px]">
+              <div class="flex  items-center gap-x-4">
+                <div class="cursor-pointer">
+                  <a href="#">
+                  <img src="./img/logo.png" width="90" height="90" alt="Logo" /></a>
+                </div>
+                <div>
+                  <h2 class="font-bold text-xl text-white">Moscowqual</h2>
+                  <p class="text-white">Ремонт бытовой техники</p>
+                </div>
+              </div>
+              <div class="flex gap-x-3 mr-7">
+                <div class="cursor-pointer hover:opacity-10
+                ">
+                  <img src="./img/instagram 1.svg" alt="Instagram" />
+                </div>
+                <div class="cursor-pointer hover:opacity-10">
+                  <img src="./img/vk-2 1.svg" alt="Vkontakte" />
+                </div>
+                <div class="cursor-pointer hover:opacity-10">
+                  <img src="./img/telegram 1.svg" alt="Telegram" />
+                </div>
+                <div class="cursor-pointer hover:opacity-10">
+                  <img src="./img/whatsapp 1.svg" alt="Whatsapp" />
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div class="flex gap-x-11">
+                <div class=" flex items-center gap-x-3">
+                  <div class="flex gap-x-2 items-center">
+                    <div class="cursor-pointer">
+                      <img src="./img/clock-2 1.svg" alt="Clock" />
+                    </div>
+                    <div class="text-white">Режим работы</div>
+                  </div>
+                  <div class="text-white">
+                    <p>ПН-ПТ с 07:00 до 24:00</p>
+                    <p>Сб, ВС: с 07:00 до 24:00</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-x-4">
+                  <div class="flex gap-x-2 items-center">
+                    <div class="w-[20px] h-[20px]">
+                      <img src="./img/telephone 1.svg" alt="Telephone" class="cursor-pointer" />
+                    </div>
+                    <div class="text-white whitespace-nowrap">+7(495) 755 69 83</div>
+                  </div>
+                  <div
+                    class="btn whitespace-nowrap rounded-[8px] border border-white cursor-pointer px-4 py-2 text-white hover:bg-white hover:text-black ease-in duration-300"
+                  >
+                    Заказать звонок
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!--Header banner-->
+        <div class="top-banner">
+          <div class="xl sm md mx-auto">
+            <nav
+              class="nav bg-white flex px-10 py-5 rounded-bl-[20px] rounded-br-[20px]"
+            >
+              <ul class="flex flex-wrap justify-between w-full top-list">
+                <li><a href="#" class="font-medium">Главная</a></li>
+                <li><a href="#price" class="font-medium">Услуги и цены</a></li>
+                <li><a href="#garant" class="font-medium">Гарантия</a></li>
+                <li><a href="#judge" class="font-medium">Юр.лица</a></li>
+                <li><a href="#cont" class="font-medium">Контакты</a></li>
+                <li><a href="#faq" class="font-medium">Вопрос-ответ</a></li>
+                <li>
+                  <a href="#footer" class="font-medium">Полезная информация</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="mt-[100px]">
+              <h1 class="text-white mb-7 font-bold text-4xl max-w-[500px]">
+                Ремонт стиральных машин в Москве
+              </h1>
+              <div>
+                <ul class="text-white list-disc ml-5 mb-8">
+                  <li>Отличные цены на запчасти</li>
+                  <li>Фирменная гарантия на все работы</li>
+                  <li>Ремонт в день обращения</li>
+                </ul>
+                <div
+                  class="btn btn-shad text-center py-3 w-[250px] bg-[#00BB34] cursor-pointer inline-block text-white font-bold rounded-[10px]"
+                >
+                  Заказать ремонт
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between gap-x-5 mt-[380px]">
+              <div
+                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+              >
+                <div>
+                  <div
+                    class="rounded-[50%] flex items-center justify-center bg-white w-[97px] h-[97px]"
+                  >
+                    <img src="./img/60-minutes 1.svg" alt="60 minutes" />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+              >
+                <div
+                  class="rounded-[50%] flex items-center justify-center bg-white w-[97px] h-[97px]"
+                >
+                  <img src="./img/interactive 1.svg" alt="interactive" />
+                </div>
+              </div>
+              <div
+                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+              >
+                <div
+                  class="rounded-[50%] flex items-center justify-center bg-white w-[97px] h-[97px]"
+                >
+                  <img src="./img/quality 1.svg" alt="Quality" />
+                </div>
+              </div>
+              <div
+                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+              >
+                <div
+                  class="rounded-[50%] bg-white w-[97px] h-[97px] flex items-center justify-center"
+                >
+                  <img src="./img/guarantee 1.svg" alt="Guarantee" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative mt-12  mx-auto gap-x-5">
+            <div class="xl md sm mx-auto flex justify-between">
+            <div class="top-img">
+              <img src="./img/askprice.png" alt="AskPrice" class="h-[350px]" />
+            </div>
+            <div class="bg-pricestar relative flex items-center pl-6">
+              <div class="">
+                <h1 class="text-black mb-5 font-medium text-3xl max-w-[570px]">
+                  Ответьте на вопросы и узнайте точную стоимость ремонта вашей
+                  машинки
+                </h1>
+                <p class="text-black max-w-[390px]">
+                  Мы перезвоним Вам и подробно проконсультируем по всем вопросам
+                  по ремонту стиральной машинки
+                </p>
+                <div
+                  class="btn mt-5 btn-shad text-center py-3 w-[250px] bg-[#00BB34] cursor-pointer inline-block text-white font-bold rounded-[10px]"
+                >
+                  Узнать стоимость
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price relative" id="price">
+        <img
+          src="./img/Sloy 4 1.png"
+          alt="Image"
+          class="w-[150px] absolute -z-50 bottom-[55%]"
+        />
+        <div class="xl md sm mx-auto mt-6">
+          <div class="mt-[650px]">
+            <h1 class="uppercase mb-4 font-bold">Стоимость услуг</h1>
+            <h2 class="font-bold border-b border-gray-500 inline-block pb-0.5">
+              Диагностика
+            </h2>
+            <div class="flex justify-around items-center flex-wrap  gap-y-3">
+              <div
+                class="flex relative flex-col gap-y-10 justify-center items-center"
+              >
+                <div
+                  class="h-[364px] w-[364px] border-[rgba(76, 26, 139, 0.42)] border-[12px] rounded-[50%] flex justify-center items-center"
+                >
+                  <img src="./img/price1.png" alt="Price 1" />
+                  <div
+                    class="absolute right-[-27px] bottom-[57px] w-[184px] h-[184px] rounded-[50%] bg-[#5F24A8] items-center text-white flex flex-col justify-center"
+                  >
+                    <h1 class="font-bold text-3xl">0</h1>
+                    <div>руб</div>
+                  </div>
+                </div>
+                <p class="text-center text-lg max-w-[220px] font-medium">
+                  Диагностика при последующем ремонте
+                </p>
+              </div>
+              <div
+                class="flex relative flex-col gap-y-10 justify-center items-center"
+              >
+                <div
+                  class="h-[364px] w-[364px] border-[rgba(76, 26, 139, 0.42)] border-[12px] rounded-[50%] flex justify-center items-center"
+                >
+                  <img src="./img/price2.png" alt="Price 2" />
+                  <div
+                    class="absolute right-[-27px] bottom-[57px] w-[184px] h-[184px] rounded-[50%] bg-[#5F24A8] items-center text-white flex flex-col justify-center"
+                  >
+                    <h1 class="font-bold text-3xl">400</h1>
+                    <div>руб</div>
+                  </div>
+                </div>
+                <p class="text-center text-lg max-w-[220px] font-medium">
+                  Диагностика без последующего ремонта
+                </p>
+              </div>
+            </div>
+            <div class="">
+              <h2
+                class="font-bold mt-[40px] mb-6 border-b border-gray-500 inline-block pb-0.5"
+              >
+                Цены на ремонт
+              </h2>
+              <div
+                class="price-table border border-[#999] rounded-[20px]"
+                id="priceTable"
+              ></div>
+            </div>
+            <div class="xl md sm mt-[50px]  mx-auto">
+              <h1 class="font-bold text-[28px] max-w-lg mb-11">
+                Выполняем срочный ремонт поломки, котрые мастер устранит за
+                <span class="text-gray-400">25 минут</span>
+              </h1>
+              <div id="washMach" class="flex items-center">
+                <div class="block order-2 relative">
+                  <img
+                    src="./img/Sloy 4 1.png"
+                    alt="Sloy"
+                    class="absolute right-[10%] top-[-40%]"
+                  />
+                  <div><img src="./img/25mins.png" alt="25 Mins" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rect relative">
+          <img
+            src="./img/st1.png"
+            alt="St1"
+            class="absolute bottom-[100px] left-0"
+          />
+          <img
+            src="./img/st1.png"
+            alt="St1"
+            width="435"
+            height="450"
+            class="absolute bottom-[100px] right-0"
+          />
+          <div
+            class="xl md sm mx-auto pt-[100px]"
+          >
+            <div
+            id="judge"
+              class="rect-top flex flex-col justify-center items-center mb-[100px]"
+            >
+              <div class="bg-white p-4 mb-7 inline-block rounded-[20px]">
+                <h1 class="font-bold text-center">НЕ ЗНАЕТЕ ЧТО СЛОМАЛОСЬ?</h1>
+                <h1 class="font-bold text-[#FF5C00]">
+                  СРОЧНЫЙ ВЫЗОВ МАСТЕРА НА ДОМ
+                </h1>
+              </div>
+              <p class="text-white">
+                Качественно устраним любые поломки вашей стиральной машины
+              </p>
+            </div>
+            <div class="rect-bot flex mt-[50px] justify-between relative">
+              <div>
+                <div class="text-white">
+                  <div class="flex items-center gap-x-5 mb-6">
+                    <img src="./img/star.svg" alt="Star" />
+                    <h2>Быстро</h2>
+                  </div>
+                  <div class="flex items-center gap-x-5 mb-6">
+                    <img src="./img/star.svg" alt="Star" />
+                    <h2>Дешево</h2>
+                  </div>
+                  <div class="flex items-center gap-x-5 mb-6">
+                    <img src="./img/star.svg" alt="Star" />
+                    <h2>Качественно</h2>
+                  </div>
+                </div>
+                <div class="inline-block">
+                  <p class="text-center text-white font-medium mb-3">
+                    Прямой телефон
+                  </p>
+                  <div
+                    class="bg-white rounded-[30px] px-5 py-2 font-medium text-3xl"
+                  >
+                    +7(495) 755 69 83
+                  </div>
+                </div>
+              </div>
+              <div class="rect-mod rounded-[20px] bg-white">
+                <div
+                  class="rounded-tr-[20px] rounded-tl-[20px] pt-3 pb-4 text-center max-w-[360px] text-lg text-white font-medium"
+                >
+                  КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА И РАССЧЕТ СТОИМОСТИ РЕМОНТА
+                </div>
+                <div class="flex flex-col gap-y-5 items-center justify-center">
+                  <div>
+                    <input
+                      type="number"
+                      placeholder="ВАШ НОМЕР ТЕЛЕФОНА"
+                      class="w-[290px] mt-9 pl-4 text-black placeholder:text-center py-3 placeholder:text-[#A5A5A5] rounded-[20px] border-[2px] border-[#CACACA] font-medium placeholder:text-lg"
+                    />
+                  </div>
+                  <button
+                    class="bg-[#00BB34] back-call btn-shad text-white font-medium text-lg w-[250px] py-4 rounded-[40px]"
+                  >
+                    Перезвоните мне
+                  </button>
+                  <p class="text-[#808080]" id="textCall">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="garant pt-[200px] pb-[100px]  flex  relative translate-y-[-100px]" id="garant"
+      >
+        <div class="mx-auto   xl sm md w-[1170px]" >
+          <div class="flex justify-center">
+            <div
+              class="bg-white rounded-[20px] w-[396px] text-center font-bold text-lg py-5 mb-[30px]"
+            >
+              100% ГАРАНТИЯ КАЧЕСТВА
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-8">
+            <h1
+              class="relative font-bold h1-line text-[28px] self-start w-auto uppercase"
+            >
+              Почему МЫ?
+            </h1>
+            <ul class="text-black font-bold text-lg">
+              <li class="flex items-center gap-x-4 mb-3">
+                <img src="./img/star.svg" alt="Star" />
+                <div>Работаем без выходных и праздников</div>
+              </li>
+              <li class="flex items-center gap-x-4 mb-3">
+                <img src="./img/star.svg" alt="Star" />
+                <div>Отличные цены за ремонт в Москве</div>
+              </li>
+              <li class="flex items-center gap-x-4 mb-3">
+                <img src="./img/star.svg" alt="Star" />
+                <div>Мы устанавливаем только оригинальные запчасти</div>
+              </li>
+              <li class="flex items-center gap-x-4 mb-3">
+                <img src="./img/star.svg" alt="Star" />
+                <div class="max-w-[490px]">
+                  Принимаем в ремонт все модели и устраняем неисправности любой
+                  сложности
+                </div>
+              </li>
+            </ul>
+            <h1 class="max-w-[650px] font-bold text-[28px] mb-4">
+              Сервисный центр «Moscowqual» предоставляет клиентам сразу две
+              гарантии:
+            </h1>
+            <div
+              class="text-white font-bold text-[28px]"
+              style="text-shadow: 2px 6px 15px rgba(255, 255, 255, 0.5)"
+            >
+              <div
+                class="w-[608px] flex gap-x-5 items-center mb-5 rounded-[55px]"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #5f24a8 48.79%,
+                    rgba(3, 191, 250, 0.84) 84.38%
+                  );
+                "
+              >
+                <div
+                  class="bg-white flex justify-center items-center rounded-[50%] w-[110px] h-[111px] border border-[#5F24A8]"
+                >
+                  <img src="./img/guarantee 1.svg" alt="Guarantee" />
+                </div>
+                <div>Гарантия на ремонт до 2-х лет</div>
+              </div>
+              <div
+                class="w-[608px] gap-x-5 flex items-center rounded-[55px] mb-5"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #5f24a8 48.79%,
+                    rgba(3, 191, 250, 0.84) 84.38%
+                  );
+                "
+              >
+                <div
+                  class="bg-white flex justify-center items-center rounded-[50%] border border-[#5F24A8] w-[110px] h-[111px]"
+                >
+                  <img src="./img/quality 1.svg" alt="Quality" />
+                </div>
+                <div>Гарантия на ремонт до 2-х лет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Comments of our clients -->
+      <div class="flex justify-center items-center pb-[60px]" id="faq">
+        <div class="xl sm md mx-auto">
+          <h1 class="text-[28px] font-bold mb-2">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h1>
+          <h2 class="font-medium text-[25px] max-w-[770px] mb-[60px]">
+            Наши клиенты всегда остаются довольны нашими услугами! Лучше всего
+            они скажут об этом сами!
+          </h2>
+          <div class="swiper mySwiper bg-white">
+            <div class="swiper-wrapper">
+            </div>
+          <!--<div class="slide   relative flex justify-center mt-[100px]" id="slide">
+            <img
+              src="./img/Sloy 4 1.png"
+              alt="Sloy"
+              class="absolute left-0 top-[-100px] -z-10"
+            />
+            <div
+              class="prev   absolute left-[-75px] hover:bg-slate-500 cursor-pointer w-[49px] h-[49px] flex justify-center items-center bg-[#5F24A8] rounded-[50%]"
+            >
+              <svg
+                width="20"
+                height="16"
+                viewBox="0 0 20 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM20 7L1 7V9L20 9V7Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="slide-cent   container flex"></div>
+            <div
+              class="next  absolute right-[-75px] cursor-pointer hover:bg-slate-500 bg-[#5F24A8] rounded-[50%] w-[49px] h-[49px] flex justify-center items-center"
+            >
+              <svg
+                width="20"
+                height="16"
+                viewBox="0 0 20 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.7071 8.70711C20.0976 8.31659 20.0976 7.68342 19.7071 7.2929L13.3431 0.928935C12.9526 0.53841 12.3195 0.53841 11.9289 0.928934C11.5384 1.31946 11.5384 1.95262 11.9289 2.34315L17.5858 8L11.9289 13.6569C11.5384 14.0474 11.5384 14.6805 11.9289 15.0711C12.3195 15.4616 12.9526 15.4616 13.3431 15.0711L19.7071 8.70711ZM-1.74846e-07 9L19 9L19 7L1.74846e-07 7L-1.74846e-07 9Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>-->
+          <div
+            class="slide-counter flex items-center gap-x-10 justify-center mt-[35px]"
+          >
+          <div class="mt-[50px]  flex">
+            <div class="swiper-pagination text-[25px] select-none  "></div>
+            <div class="swiper-button-next   bg-[#5F24A8] hover:bg-slate-500 rounded-[50%] w-[49px] h-[49px]">
+              <svg
+              width="20"
+              height="16"
+              viewBox="0 0 20 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7071 8.70711C20.0976 8.31659 20.0976 7.68342 19.7071 7.2929L13.3431 0.928935C12.9526 0.53841 12.3195 0.53841 11.9289 0.928934C11.5384 1.31946 11.5384 1.95262 11.9289 2.34315L17.5858 8L11.9289 13.6569C11.5384 14.0474 11.5384 14.6805 11.9289 15.0711C12.3195 15.4616 12.9526 15.4616 13.3431 15.0711L19.7071 8.70711ZM-1.74846e-07 9L19 9L19 7L1.74846e-07 7L-1.74846e-07 9Z"
+                fill="white"
+              />
+            </svg>
+            </div>
+            
+            <div class="swiper-button-prev bg-[#5F24A8] hover:bg-slate-500 rounded-[50%] w-[49px] h-[49px] ">
+              <svg
+              width="20"
+              height="16"
+              viewBox="0 0 20 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM20 7L1 7V9L20 9V7Z"
+                fill="white"
+              />
+            </svg>
+            </div>
+            </div>
+          </div> 
+          </div>
+          </div>
+        </div>
+
+      </section>
+      <section
+      id="cont"
+        class="pb-[30px]"
+        style="background: url('./img/footform.png') no-repeat center"
+      >
+        <div class="container mx-auto pt-[60px]">
+          <div class="flex flex-col items-center gap-y-6">
+            <div class="bg-white p-5 text-[22px] font-bold text-center inline-block   rounded-[20px]">НЕ ТЕРЯЙТЕ ВРЕМЯ
+              ПОЛУЧИТЕ СКИДКУ 10%
+            </div>
+            <p class="text-white font-medium text-[22px]">Мы работаем в Москве и в Московской области</p>
+            <div class="rect-mod rounded-[20px] bg-white pb-[20px]">
+              <div
+                class="rounded-tr-[20px] rounded-tl-[20px] pt-3 pb-4 text-center max-w-[360px] text-lg text-white font-medium"
+              >
+                КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА И РАССЧЕТ СТОИМОСТИ РЕМОНТА
+              </div>
+              <div class="flex flex-col gap-y-5 items-center justify-center">
+                <div>
+                  <input
+                    type="number"
+                    placeholder="ВАШ НОМЕР ТЕЛЕФОНА"
+                    class="w-[290px] mt-9 pl-4 text-black placeholder:text-center py-3 placeholder:text-[#A5A5A5] rounded-[20px] border-[2px] border-[#CACACA] font-medium placeholder:text-lg"
+                  />
+                </div>
+                <button
+                  class="bg-[#00BB34] back-call btn-shad text-white font-medium text-lg w-[250px] py-4 rounded-[40px]"
+                >
+                  Перезвоните мне
+                </button>
+                <p class="text-[#808080]" id="textCall">
+                </p>
+              </div>
+            </div>
+            <div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer bg-[#000] py-[50px]" id="footer">
+          <div class="container text-white mx-auto">
+            <div class="foot-top flex justify-between items-center">
+              <div class="flex items-center gap-x-4">
+                <div class="cursor-pointer">
+                  <img src="./img/logo.png" width="90" height="90" alt="Logo" />
+                </div>
+                <div>
+                  <h2 class="font-bold text-xl text-white">Moscowqual</h2>
+                  <p class="text-white">Ремонт бытовой техники</p>
+                </div>
+              </div>
+              <ul class="flex text-white gap-x-[50px] flex-wrap">
+                <li><a href="#top">Главная</a></li>
+                <li><a href="#price">Услуги и цены</a></li>
+                <li><a href="#garant">Гарантия</a></li>
+                <li><a href="#judge">Юр.лица</a></li>
+                <li><a href="#faq">Контакты</a></li>
+                <li><a href="#cont">Вопрос-ответ</a></li>
+                <li><a href="#footer">Полезная информация</a></li>
+              </ul>
+              </div>
+              <div class="foot-bot mt-[40px] flex justify-between items-end">
+                  <div >
+                    <div class="flex gap-x-6 mb-9">
+                      <span>Мы в социальных сетях</span>
+                      <div class="flex gap-x-2 ">
+                        <img src="./img/instagram 1.svg" alt="Instagram" class="cursor-pointer hover:opacity-10">
+                        <img src="./img/vk-2 1.svg" alt="Vk" class="cursor-pointer hover:opacity-10">
+                        <img src="./img/telegram 1.svg" alt="Telegram" class="cursor-pointer hover:opacity-10">
+                        <img src="./img/whatsapp 1.svg" alt="Whatsapp" class="cursor-pointer hover:opacity-10">
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-x-3">
+                      <div class="flex gap-x-2">
+                        <div class="cursor-pointer">
+                          <img src="./img/clock-2 1.svg" alt="Clock" />
+                        </div>
+                        <div class="text-white">Режим работы</div>
+                      </div>
+                      <div class="text-white">
+                        <p>ПН-ПТ с 07:00 до 24:00</p>
+                        <p>Сб, ВС: с 07:00 до 24:00</p>
+                      </div>
+                    </div>
+                 </div>
+                 <div class="text-center">
+                  © 2021  sitename.ru <br>
+                  Все права защищены
+                 </br>
+               </div>
+               <div class="flex items-center gap-x-4">
+                <div class="flex gap-x-2">
+                  <div>
+                    <img src="./img/telephone 1.svg" alt="Telephone" />
+                  </div>
+                  <div class="text-white">+7(495) 755 69 83</div>
+                </div>
+                <div
+                  class="btn whitespace-nowrap rounded-[8px] border border-white cursor-pointer px-4 py-2 text-white hover:bg-white hover:text-black ease-in duration-300"
+                >
+                  Заказать звонок
+                </div>
+              </div>
+          </div>
+        </footer>
+    </div>
+  </body>
+</html>
