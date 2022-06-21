@@ -11,13 +11,13 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
-    <script defer src="./js/script.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script  defer src="./js/script.js"></script>
+    <script  src="https://cdn.tailwindcss.com"></script>
     <script  src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper relative">
       <div id="modal" class=" flex justify-center items-center modal z-50 bg-[#00000096] opacity-3 w-[100vw] h-[100vh] fixed">
           <div class="bg-white relative w-[60%] sm:w-[35%]  rounded-[20px] p-5">
             <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" class="absolute right-2 top-2 cursor-pointer" onclick="onCancel()"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 8.7070312 7.2929688 L 7.2929688 8.7070312 L 10.585938 12 L 7.2929688 15.292969 L 8.7070312 16.707031 L 12 13.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13.414062 12 L 16.707031 8.7070312 L 15.292969 7.2929688 L 12 10.585938 L 8.7070312 7.2929688 z"/></svg>
@@ -36,12 +36,26 @@
             <button type="submit" class="bg-[#00BB34] w-full rounded-[10px] p-3 btn-shad mt-4 text-center text-white">Заказать</button>
           </div>
       </div>
-      <section class="top">
+      </div>
+      <section class="top relative">
+        <div class="pb-[70px]    absolute w-full top-[15%] bg-black hidden "  id="modalShow">
+          <ul class="w-full text-white text-center flex flex-col gap-y-10 mt-[70px]">
+            <li class="hover:bg-white hover:text-black"><a href="#" class="font-medium">Главная</a></li>
+            <li class="hover:bg-white hover:text-black"><a href="#price" class="font-medium">Услуги и цены</a></li>
+            <li class="hover:bg-white hover:text-black"><a href="#garant" class="font-medium">Гарантия</a></li>
+            <li class="hover:bg-white hover:text-black"><a href="#judge" class="font-medium">Юр.лица</a></li>
+            <li class="hover:bg-white hover:text-black"><a href="#cont" class="font-medium">Контакты</a></li>
+            <li class="hover:bg-white hover:text-black"><a href="#faq" class="font-medium">Вопрос-ответ</a></li>
+            <li class="hover:bg-white hover:text-black">
+              <a href="#footer" class="font-medium">Полезная информация</a>
+            </li>
+          </ul>
+        </div>
         <header class="header py-5">
           <div
-            class="flex justify-center xl md sm mx-auto  items-center"
+            class="flex  sm:flex-nowrap  justify-center xl md  xs sm mx-auto  items-center"
           >
-            <div class="flex items-center gap-x-[35px]">
+            <div class="flex items-center gap-x-[35px] flex-wrap md:flex-nowrap gap-y-4 ">
               <div class="flex  items-center gap-x-4">
                 <div class="cursor-pointer">
                   <a href="#">
@@ -52,10 +66,10 @@
                   <p class="text-white">Ремонт бытовой техники</p>
                 </div>
               </div>
-              <div class="flex gap-x-3 mr-7">
+              <div class="flex gap-x-3 mr-7 ">
                 <div class="cursor-pointer hover:opacity-10
                 ">
-                  <img src="./img/instagram 1.svg" alt="Instagram" />
+                  <img src="./img/instagram 2.png" alt="Instagram" />
                 </div>
                 <div class="cursor-pointer hover:opacity-10">
                   <img src="./img/vk-2 1.svg" alt="Vkontakte" />
@@ -70,7 +84,7 @@
             </div>
             <div class="flex justify-between">
               <div class="flex gap-x-11">
-                <div class=" flex items-center gap-x-3">
+                <div class=" md:flex hidden items-center gap-x-3">
                   <div class="flex gap-x-2 items-center">
                     <div class="cursor-pointer">
                       <img src="./img/clock-2 1.svg" alt="Clock" />
@@ -82,7 +96,7 @@
                     <p>Сб, ВС: с 07:00 до 24:00</p>
                   </div>
                 </div>
-                <div class="flex items-center gap-x-4">
+                <div class="hidden sm:flex items-center gap-x-4 ">
                   <div class="flex gap-x-2 items-center">
                     <div class="w-[20px] h-[20px]">
                       <img src="./img/telephone 1.svg" alt="Telephone" class="cursor-pointer" />
@@ -97,15 +111,39 @@
                 </div>
               </div>
             </div>
+            <div class="cursor-pointer block sm:hidden" id="burger"><img src="./img/list 1.svg" alt="Burger"></div>
           </div>
         </header>
         <!--Header banner-->
         <div class="top-banner">
-          <div class="xl sm md mx-auto">
+          <div class="xl xs sm md mx-auto">
             <nav
-              class="nav bg-white flex px-10 py-5 rounded-bl-[20px] rounded-br-[20px]"
+              class="nav bg-white flex px-3 sm:px-10 py-5 rounded-bl-[20px] rounded-br-[20px]"
             >
-              <ul class="flex flex-wrap justify-between w-full top-list">
+            <div class="flex sm:hidden items-center gap-x-2 gap-y-4 flex-wrap justify-center sm:justify-start ">
+              <div class="cursor-pointer">
+                <img src="./img/clock-2 1.svg" alt="Clock" />
+              </div>
+              <div class="text-[#01669C] text-[13px]">
+                <p>ПН-ПТ с 07:00 до 24:00</p>
+                <p>Сб, ВС: с 07:00 до 24:00</p>
+              </div>
+              <div class="flex gap-x-2 items-center">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.6435 9.26141C10.1861 8.80985 9.61507 8.80985 9.1606 9.26141C8.81392 9.60517 8.46724 9.94894 8.12639 10.2985C8.03316 10.3947 7.9545 10.4151 7.84089 10.351C7.61657 10.2286 7.37768 10.1296 7.1621 9.99555C6.15702 9.36337 5.31508 8.55057 4.56929 7.6358C4.1993 7.18133 3.8701 6.69482 3.63996 6.14712C3.59334 6.03642 3.60208 5.96359 3.69239 5.87328C4.03907 5.53825 4.37701 5.19449 4.71786 4.85072C5.19273 4.37295 5.19273 3.8136 4.71495 3.33291C4.44402 3.05906 4.17308 2.79104 3.90215 2.51719C3.62248 2.23752 3.34572 1.95493 3.06313 1.67817C2.60575 1.23244 2.03474 1.23244 1.58028 1.68109C1.23068 2.02485 0.895657 2.37736 0.540238 2.7153C0.211039 3.02702 0.044983 3.40865 0.0100237 3.85438C-0.0453283 4.57979 0.132381 5.26441 0.382922 5.93154C0.895657 7.31243 1.67641 8.53892 2.62322 9.66344C3.90215 11.1842 5.4287 12.3873 7.21454 13.2555C8.0186 13.6459 8.85179 13.9459 9.75782 13.9955C10.3813 14.0304 10.9231 13.8731 11.3572 13.3866C11.6544 13.0545 11.9894 12.7515 12.304 12.434C12.7701 11.962 12.773 11.391 12.3098 10.9249C11.7563 10.3684 11.1999 9.81493 10.6435 9.26141Z" fill="#5F24A8"/>
+                    <path d="M10.0871 6.93954L11.1621 6.75601C10.9931 5.76841 10.527 4.87403 9.81904 4.1632C9.07033 3.41449 8.12352 2.94254 7.08057 2.79688L6.92908 3.8777C7.73605 3.99132 8.4702 4.35547 9.04994 4.93521C9.59763 5.48291 9.95596 6.17627 10.0871 6.93954Z" fill="#0039A8"/>
+                    <path d="M11.768 2.26652C10.5269 1.02547 8.95666 0.241801 7.22327 0L7.07178 1.08082C8.5692 1.29058 9.92678 1.96937 10.9989 3.03854C12.0156 4.05527 12.6827 5.34002 12.9245 6.75295L13.9995 6.56942C13.7169 4.93216 12.9449 3.4464 11.768 2.26652Z" fill="#020BDE"/>
+                    </svg>
+                                    <div class="text-[#01669C] font-medium whitespace-nowrap">+7(495) 755 69 83</div>
+              </div>
+              <div
+             
+                class="btn font-medium text-[#5F24A8] hover:bg-[#5F24A8] hover:text-white border border-[#04629A] order-btn whitespace-nowrap rounded-[8px]  cursor-pointer px-4 py-2    ease-in duration-300"
+              >
+                Заказать звонок
+              </div>
+            </div>
+              <ul class="hidden sm:flex flex-wrap justify-between w-full top-list">
                 <li><a href="#" class="font-medium">Главная</a></li>
                 <li><a href="#price" class="font-medium">Услуги и цены</a></li>
                 <li><a href="#garant" class="font-medium">Гарантия</a></li>
@@ -122,7 +160,7 @@
                 Ремонт стиральных машин в Москве
               </h1>
               <div>
-                <ul class="text-white list-disc ml-5 mb-8">
+                <ul class="text-white list-disc ml-5 mb-8 font-medium">
                   <li>Отличные цены на запчасти</li>
                   <li>Фирменная гарантия на все работы</li>
                   <li>Ремонт в день обращения</li>
@@ -134,9 +172,9 @@
                 </div>
               </div>
             </div>
-            <div class="flex justify-between gap-x-5 mt-[380px]">
+            <div class="flex justify-center sm:justify-between gap-5 mt-[380px] flex-wrap">
               <div
-                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+                class="top-item w-[209px] h-[224px] sm:w-[262px] sm:h-[280px] rounded-[28px] flex justify-center items-center"
               >
                 <div>
                   <div
@@ -147,7 +185,7 @@
                 </div>
               </div>
               <div
-                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+                class="top-item w-[209px] h-[224px] sm:w-[262px] sm:h-[280px] rounded-[28px] flex justify-center items-center"
               >
                 <div
                   class="rounded-[50%] flex items-center justify-center bg-white w-[97px] h-[97px]"
@@ -156,7 +194,7 @@
                 </div>
               </div>
               <div
-                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+                class="top-item w-[209px] h-[224px] sm:w-[262px] sm:h-[280px] rounded-[28px] flex justify-center items-center"
               >
                 <div
                   class="rounded-[50%] flex items-center justify-center bg-white w-[97px] h-[97px]"
@@ -165,7 +203,7 @@
                 </div>
               </div>
               <div
-                class="top-item w-[262px] h-[280px] rounded-[28px] flex justify-center items-center"
+                class="top-item w-[209px] h-[224px] sm:w-[262px] sm:h-[280px] rounded-[28px] flex justify-center items-center"
               >
                 <div
                   class="rounded-[50%] bg-white w-[97px] h-[97px] flex items-center justify-center"
@@ -176,17 +214,17 @@
             </div>
           </div>
           <div class="relative mt-12  mx-auto gap-x-5">
-            <div class="xl md sm mx-auto flex justify-between">
-            <div class="top-img">
+            <div class="xl  xs md sm mx-auto flex justify-between">
+            <div class="top-img hidden sm:block">
               <img src="./img/askprice.png" alt="AskPrice" class="h-[350px]" />
             </div>
-            <div class="bg-pricestar relative flex items-center pl-6">
+            <div class=" text-center sm:text-left bg-pricestar relative flex items-center pl-6 justify-center sm:justify-start rounded-[10px] sm:rounded-0">
               <div class="">
-                <h1 class="text-black mb-5 font-medium text-3xl max-w-[570px]">
+                <h1 class="text-white sm:text-black mb-5 font-medium text-3xl max-w-[570px]">
                   Ответьте на вопросы и узнайте точную стоимость ремонта вашей
                   машинки
                 </h1>
-                <p class="text-black max-w-[390px]">
+                <p class="text-white sm:text-black max-w-[390px] mx-auto sm:mx-0">
                   Мы перезвоним Вам и подробно проконсультируем по всем вопросам
                   по ремонту стиральной машинки
                 </p>
@@ -207,28 +245,28 @@
           alt="Image"
           class="w-[150px] absolute -z-50 bottom-[55%]"
         />
-        <div class="xl md sm mx-auto mt-6">
-          <div class="mt-[650px]">
-            <h1 class="uppercase mb-4 font-bold">Стоимость услуг</h1>
-            <h2 class="font-bold border-b border-gray-500 inline-block pb-0.5">
+        <div class="xl md xs sm mx-auto mt-6">
+          <div class="mt-[1000px] md:mt-[650px]  ">
+            <h1 class="uppercase mb-4 font-bold text-[20px]">Стоимость услуг</h1>
+            <h2 class="font-bold text-[18px] border-b border-gray-500 inline-block pb-0.5">
               Диагностика
             </h2>
-            <div class="flex justify-around items-center flex-wrap  gap-y-3">
+            <div class="flex justify-around items-center flex-wrap  gap-y-3 mt-[50px]">
               <div
                 class="flex relative flex-col gap-y-10 justify-center items-center"
               >
                 <div
-                  class="h-[364px] w-[364px] border-[rgba(76, 26, 139, 0.42)] border-[12px] rounded-[50%] flex justify-center items-center"
+                  class="h-[231px] w-[231px] sm:w-[364px] sm:h-[364px] border-[#4C1A8B6B] border-[12px] rounded-[50%] flex justify-center items-center"
                 >
-                  <img src="./img/price1.png" alt="Price 1" />
+                  <img src="./img/price1.png" alt="Price 1" class="w-[150px] sm:w-[267px]" />
                   <div
-                    class="absolute right-[-27px] bottom-[57px] w-[184px] h-[184px] rounded-[50%] bg-[#5F24A8] items-center text-white flex flex-col justify-center"
+                    class="absolute right-[-27px] bottom-[101px] sm:bottom-[57px] w-[116px] h-[116px] sm:w-[184px] sm:h-[184px] rounded-[50%] bg-[#5F24A8] items-center text-white flex flex-col justify-center"
                   >
                     <h1 class="font-bold text-3xl">0</h1>
                     <div>руб</div>
                   </div>
                 </div>
-                <p class="text-center text-lg max-w-[220px] font-medium">
+                <p class="text-center text-[20px] max-w-[220px] font-medium">
                   Диагностика при последующем ремонте
                 </p>
               </div>
@@ -236,39 +274,42 @@
                 class="flex relative flex-col gap-y-10 justify-center items-center"
               >
                 <div
-                  class="h-[364px] w-[364px] border-[rgba(76, 26, 139, 0.42)] border-[12px] rounded-[50%] flex justify-center items-center"
+                  class="h-[231px] w-[231px] sm:w-[364px] sm:h-[364px] border-[#4C1A8B6B] border-[12px] rounded-[50%] flex justify-center items-center"
                 >
-                  <img src="./img/price2.png" alt="Price 2" />
+                  <img src="./img/price2.png" alt="Price 2" class="w-[150px] sm:w-[250px]" />
                   <div
-                    class="absolute right-[-27px] bottom-[57px] w-[184px] h-[184px] rounded-[50%] bg-[#5F24A8] items-center text-white flex flex-col justify-center"
+                    class="absolute right-[-27px] bottom-[101px] sm:bottom-[57px] w-[116px] h-[116px] sm:w-[184px] sm:h-[184px] rounded-[50%] bg-[#5F24A8] items-center text-white flex flex-col justify-center"
                   >
                     <h1 class="font-bold text-3xl">400</h1>
                     <div>руб</div>
                   </div>
                 </div>
-                <p class="text-center text-lg max-w-[220px] font-medium">
+                <p class="text-center text-[20px] max-w-[220px] font-medium">
                   Диагностика без последующего ремонта
                 </p>
               </div>
             </div>
             <div class="">
               <h2
-                class="font-bold mt-[40px] mb-6 border-b border-gray-500 inline-block pb-0.5"
+                class="font-bold mt-[40px] mb-6 border-b border-gray-500 inline-block pb-0.5 text-[18px] sm:text-[22px]"
               >
                 Цены на ремонт
               </h2>
               <div
-                class="price-table border border-[#999] rounded-[20px]"
+                class=  "price-table border border-[#999] rounded-[20px]"
                 id="priceTable"
               ></div>
+              <div class="flex justify-center">
+              <button class="mx-auto btn mt-5 btn-shad text-center py-3 w-[250px] bg-[#00BB34] cursor-pointer inline-block text-white font-bold rounded-[10px]">Заказать мастера</button>
+             </div>
             </div>
-            <div class="xl md sm mt-[50px]  mx-auto">
-              <h1 class="font-bold text-[28px] max-w-lg mb-11">
+            <div class="xl md sm xs  mt-[50px]  mx-0 sm:mx-auto">
+              <h1 class="font-bold text-[20px] sm:text-[28px] max-w-lg mb-11">
                 Выполняем срочный ремонт поломки, котрые мастер устранит за
                 <span class="text-gray-400">25 минут</span>
               </h1>
               <div id="washMach" class="flex items-center">
-                <div class="block order-2 relative">
+                <div class="block order-2 absolute sm:relative">
                   <img
                     src="./img/Sloy 4 1.png"
                     alt="Sloy"
@@ -280,21 +321,21 @@
             </div>
           </div>
         </div>
-        <div class="rect relative">
+        <div class="rect relative h-[900px] sm:h-[800px]">
           <img
             src="./img/st1.png"
             alt="St1"
-            class="absolute bottom-[100px] left-0"
+            class="absolute bottom-[500px] sm:bottom-[100px] left-0"
           />
           <img
             src="./img/st1.png"
             alt="St1"
             width="435"
             height="450"
-            class="absolute bottom-[100px] right-0"
+            class="absolute bottom-0 sm:bottom-[-100px] right-0"
           />
           <div
-            class="xl md sm mx-auto pt-[100px]"
+            class="xl md sm xs mx-auto pt-[100px]"
           >
             <div
             id="judge"
@@ -306,12 +347,12 @@
                   СРОЧНЫЙ ВЫЗОВ МАСТЕРА НА ДОМ
                 </h1>
               </div>
-              <p class="text-white">
+              <p class="text-white font-medium text-center sm:text-left max-w-[415px] sm:max-w-full">
                 Качественно устраним любые поломки вашей стиральной машины
               </p>
             </div>
-            <div class="rect-bot flex mt-[50px] justify-between relative">
-              <div>
+            <div class="rect-bot flex flex-wrap sm:flex-nowrap mt-[50px] justify-between relative">
+              <div class="w-full sm:w-auto flex items-center flex-wrap justify-between sm:block">
                 <div class="text-white">
                   <div class="flex items-center gap-x-5 mb-6">
                     <img src="./img/star.svg" alt="Star" />
@@ -331,13 +372,13 @@
                     Прямой телефон
                   </p>
                   <div
-                    class="bg-white rounded-[30px] px-5 py-2 font-medium text-3xl"
+                    class="bg-white rounded-[30px] px-5 py-2 font-medium text-[25px] sm:text-3xl"
                   >
                     +7(495) 755 69 83
                   </div>
                 </div>
               </div>
-              <div class="rect-mod rounded-[20px] bg-white">
+              <div class="rect-mod rounded-[20px] bg-white mx-auto sm:mx-0">
                 <div
                   class="rounded-tr-[20px] rounded-tl-[20px] pt-3 pb-4 text-center max-w-[360px] text-lg text-white font-medium"
                 >
@@ -348,7 +389,7 @@
                     <input
                       type="number"
                       placeholder="ВАШ НОМЕР ТЕЛЕФОНА"
-                      class="w-[290px] mt-9 pl-4 text-black placeholder:text-center py-3 placeholder:text-[#A5A5A5] rounded-[20px] border-[2px] border-[#CACACA] font-medium placeholder:text-lg"
+                      class="w-[290px] mt-9 pl-4 text-black placeholder:text-center py-3 placeholder:text-[#A5A5A5] rounded-[10px] border-[2px] border-[#CACACA] font-medium placeholder:text-lg"
                     />
                   </div>
                   <button
@@ -365,9 +406,9 @@
         </div>
       </section>
       <section
-        class="garant pt-[200px] pb-[100px]  flex  relative translate-y-[-100px]" id="garant"
+        class="garant pt-[200px] pb-[100px] -z-10  flex  relative translate-y-[-100px]" id="garant"
       >
-        <div class="mx-auto   xl sm md w-[1170px]" >
+        <div class="mx-auto   xl sm xs  md w-full px-3 sm:px-0 sm:w-[1170px]" >
           <div class="flex justify-center">
             <div
               class="bg-white rounded-[20px] w-[396px] text-center font-bold text-lg py-5 mb-[30px]"
@@ -402,16 +443,16 @@
                 </div>
               </li>
             </ul>
-            <h1 class="max-w-[650px] font-bold text-[28px] mb-4">
+            <h1 class="max-w-[550px] sm:max-w-[650px] font-bold text-[24px] sm:text-[28px] mb-4 ">
               Сервисный центр «Moscowqual» предоставляет клиентам сразу две
               гарантии:
             </h1>
             <div
-              class="text-white font-bold text-[28px]"
+              class="text-white font-bold text-[22px] sm:text-[28px]"
               style="text-shadow: 2px 6px 15px rgba(255, 255, 255, 0.5)"
             >
               <div
-                class="w-[608px] flex gap-x-5 items-center mb-5 rounded-[55px]"
+                class="w-full sm:w-[608px] flex gap-x-5 items-center mb-5 rounded-[55px]"
                 style="
                   background: linear-gradient(
                     90deg,
@@ -419,16 +460,17 @@
                     rgba(3, 191, 250, 0.84) 84.38%
                   );
                 "
+
               >
                 <div
                   class="bg-white flex justify-center items-center rounded-[50%] w-[110px] h-[111px] border border-[#5F24A8]"
                 >
                   <img src="./img/guarantee 1.svg" alt="Guarantee" />
                 </div>
-                <div>Гарантия на ремонт до 2-х лет</div>
+                <div class="text-[25px] sm:text">Гарантия на ремонт до 2-х лет</div>
               </div>
               <div
-                class="w-[608px] gap-x-5 flex items-center rounded-[55px] mb-5"
+                class="w-full sm:w-[608px] gap-x-5 flex items-center rounded-[55px] mb-5"
                 style="
                   background: linear-gradient(
                     90deg,
@@ -442,7 +484,7 @@
                 >
                   <img src="./img/quality 1.svg" alt="Quality" />
                 </div>
-                <div>Гарантия на ремонт до 2-х лет</div>
+                <div class="text-[25px] sm:text">Гарантия на ремонт до 2-х лет</div>
               </div>
             </div>
           </div>
@@ -450,9 +492,9 @@
       </section>
       <!-- Comments of our clients -->
       <div class="flex justify-center items-center pb-[60px]" id="faq">
-        <div class="xl sm md mx-auto">
+        <div class="xl sm md xs  mx-auto">
           <h1 class="text-[28px] font-bold mb-2">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h1>
-          <h2 class="font-medium text-[25px] max-w-[770px] mb-[60px]">
+          <h2 class="font-medium text-[25px] max-w-[429px] sm:max-w-[770px]  mb-[60px]">
             Наши клиенты всегда остаются довольны нашими услугами! Лучше всего
             они скажут об этом сами!
           </h2>
@@ -504,7 +546,7 @@
           >
           <div class="mt-[50px]  flex">
             <div class="swiper-pagination text-[25px] select-none  "></div>
-            <div class="swiper-button-next   bg-[#5F24A8] hover:bg-slate-500 rounded-[50%] w-[49px] h-[49px]">
+            <div class="swiper-button-next mx-5 md:mx-0   bg-[#5F24A8] hover:bg-slate-500 rounded-[50%] w-[49px] h-[49px]">
               <svg
               width="20"
               height="16"
@@ -519,7 +561,7 @@
             </svg>
             </div>
             
-            <div class="swiper-button-prev bg-[#5F24A8] hover:bg-slate-500 rounded-[50%] w-[49px] h-[49px] ">
+            <div class="swiper-button-prev ml-[-45px] md:ml-0  bg-[#5F24A8] hover:bg-slate-500 rounded-[50%] w-[49px] h-[49px] ">
               <svg
               width="20"
               height="16"
@@ -547,10 +589,10 @@
       >
         <div class="container mx-auto pt-[60px]">
           <div class="flex flex-col items-center gap-y-6">
-            <div class="bg-white p-5 text-[22px] font-bold text-center inline-block   rounded-[20px]">НЕ ТЕРЯЙТЕ ВРЕМЯ
+            <div class="bg-white p-5 text-[22px] font-bold text-center inline-block   rounded-[20px] max-w-[322px] sm:max-w-full">НЕ ТЕРЯЙТЕ ВРЕМЯ
               ПОЛУЧИТЕ СКИДКУ 10%
             </div>
-            <p class="text-white font-medium text-[22px]">Мы работаем в Москве и в Московской области</p>
+            <p class="text-white font-medium text-[22px] text-center sm:text">Мы работаем в Москве и в Московской области</p>
             <div class="rect-mod rounded-[20px] bg-white pb-[20px]">
               <div
                 class="rounded-tr-[20px] rounded-tl-[20px] pt-3 pb-4 text-center max-w-[360px] text-lg text-white font-medium"
@@ -562,7 +604,7 @@
                   <input
                     type="number"
                     placeholder="ВАШ НОМЕР ТЕЛЕФОНА"
-                    class="w-[290px] mt-9 pl-4 text-black placeholder:text-center py-3 placeholder:text-[#A5A5A5] rounded-[20px] border-[2px] border-[#CACACA] font-medium placeholder:text-lg"
+                    class="w-[290px] mt-9 pl-4 text-black placeholder:text-center py-3 placeholder:text-[#A5A5A5] rounded-[10px] border-[2px] border-[#CACACA] font-medium placeholder:text-lg"
                   />
                 </div>
                 <button
@@ -580,7 +622,7 @@
       </section>
       <footer class="footer bg-[#000] py-[50px]" id="footer">
           <div class="container text-white mx-auto">
-            <div class="foot-top flex justify-between items-center">
+            <div class="foot-top flex justify-between items-center flex-col sm:flex-row">
               <div class="flex items-center gap-x-4">
                 <div class="cursor-pointer">
                   <img src="./img/logo.png" width="90" height="90" alt="Logo" />
@@ -590,7 +632,7 @@
                   <p class="text-white">Ремонт бытовой техники</p>
                 </div>
               </div>
-              <ul class="flex text-white gap-x-[50px] flex-wrap">
+              <ul class="flex text-white gap-x-[50px] text-center flex-wrap flex-col sm:flex-row gap-y-5">
                 <li><a href="#top">Главная</a></li>
                 <li><a href="#price">Услуги и цены</a></li>
                 <li><a href="#garant">Гарантия</a></li>
@@ -600,23 +642,23 @@
                 <li><a href="#footer">Полезная информация</a></li>
               </ul>
               </div>
-              <div class="foot-bot mt-[40px] flex justify-between items-end">
+              <div class="foot-bot mt-[40px] flex justify-between items:center sm:items-end flex-col sm:flex-row">
                   <div >
-                    <div class="flex gap-x-6 mb-9">
-                      <span>Мы в социальных сетях</span>
-                      <div class="flex gap-x-2 ">
+                    <div class="flex gap-x-6 mb-9 justify-center sm:justify-start">
+                      <span class="hidden sm:inline">Мы в социальных сетях</span>
+                      <div class="flex gap-x-2">
                         <img src="./img/instagram 1.svg" alt="Instagram" class="cursor-pointer hover:opacity-10">
                         <img src="./img/vk-2 1.svg" alt="Vk" class="cursor-pointer hover:opacity-10">
                         <img src="./img/telegram 1.svg" alt="Telegram" class="cursor-pointer hover:opacity-10">
                         <img src="./img/whatsapp 1.svg" alt="Whatsapp" class="cursor-pointer hover:opacity-10">
                       </div>
                     </div>
-                    <div class="flex items-center gap-x-3">
+                    <div class="flex items-center gap-x-3 justify-center sm:justify-start">
                       <div class="flex gap-x-2">
                         <div class="cursor-pointer">
                           <img src="./img/clock-2 1.svg" alt="Clock" />
                         </div>
-                        <div class="text-white">Режим работы</div>
+                        <div class="text-white hidden sm:block">Режим работы</div>
                       </div>
                       <div class="text-white">
                         <p>ПН-ПТ с 07:00 до 24:00</p>
@@ -624,12 +666,12 @@
                       </div>
                     </div>
                  </div>
-                 <div class="text-center">
+                 <div class="text-center order-3 sm:order">
                   © 2021  sitename.ru <br>
                   Все права защищены
                  </br>
                </div>
-               <div class="flex items-center gap-x-4">
+               <div class="flex items-center gap-x-4 justify-center sm:justify-start my-5 sm:my-0">
                 <div class="flex gap-x-2">
                   <div>
                     <img src="./img/telephone 1.svg" alt="Telephone" />
